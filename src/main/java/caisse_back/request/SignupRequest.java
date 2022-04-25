@@ -6,6 +6,10 @@ import java.util.Set;
 
 import javax.validation.constraints.*;
 
+import java.util.Set;
+
+import javax.validation.constraints.*;
+
 public class SignupRequest {
     @NotBlank
     @Size(min = 3, max = 20)
@@ -16,7 +20,7 @@ public class SignupRequest {
     @Email
     private String email;
 
-    private Set<Role> role;
+    private Set<String> role;
 
     @NotBlank
     @Size(min = 6, max = 40)
@@ -46,11 +50,11 @@ public class SignupRequest {
         this.password = password;
     }
 
-    public void setRole(Set<Role> role) {
+    public void setRole(Set<String> role) {
         this.role = role;
     }
 
-    public Set<Role> getRole() {
+    public Set<String> getRole() {
         return role;
     }
 
